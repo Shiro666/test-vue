@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div class="pixi-container"></div>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Init from './game/init';
 export default {
-  name: 'App'
+  data() {
+    return {}
+  },
+
+  mounted() {
+    Init.loadImg();
+  }
 }
 </script>
 
